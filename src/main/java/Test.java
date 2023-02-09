@@ -3,7 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Test {
-
+git config
     public static void main(String[] args) throws InterruptedException {
 
         WebDriverManager.chromedriver().setup();
