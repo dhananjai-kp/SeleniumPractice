@@ -12,18 +12,11 @@ import java.util.concurrent.TimeUnit;
 public class Test4 {
     public static void main(String[] args) throws InterruptedException {
 
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
-
-//        driver.get("http://139.59.91.96:5001/selenium-workbook/");
-//        driver.manage().window().maximize();
-//
-//        driver.findElement(By.xpath("//a[text()= 'Inline Frames']")).click();
-//        driver.switchTo().frame("frame-1");
-//        driver.switchTo().frame("frame-2");
-//
-//        driver.switchTo().defaultContent();
-
+       WebDriverManager.chromedriver().setup();
+       WebDriver driver = new ChromeDriver() ;
+       driver.get("http://139.59.91.96:5001/selenium-workbook");
+       driver.findElement(By.xpath("//a[text()=\"Inline Frames\"]")).click();
+       driver.switchTo().frame("frame-1");
 
 
 
@@ -47,18 +40,19 @@ public class Test4 {
 //        alert2.sendKeys("sasdasdfsafsdaf");
 
 
-        driver.get("http://139.59.91.96:5001/selenium-workbook/registration-form.html");
-        WebElement dropdown  = driver.findElement(By.name("hearAbout"));
-//        driver.manage().timeouts().implicitlyWait(3000, TimeUnit.MILLISECONDS);
-        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(3000));
-
-        dropdown.click();
-        Select select = new Select(dropdown);
-        select.selectByVisibleText("Advert");
-
-
-
-        Thread.sleep(10000);
+//        driver.get("http://139.59.91.96:5001/selenium-workbook/registration-form.html");
+//        WebElement dropdown  = driver.findElement(By.name("hearAbout"));
+////        driver.manage().timeouts().implicitlyWait(3000, TimeUnit.MILLISECONDS);
+//        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(3000));
+//
+//        dropdown.click();
+//        Select select = new Select(dropdown);
+//        select.selectByVisibleText("Advert");
+//        driver.findElement(By.xpath("//button[@type = \"submit\"]")).click();
+//
+//        System.out.println(driver.findElement(By.xpath("//div")).getClass());
+//
+//        Thread.sleep(10000);
         //driver.quit();
     }
 
